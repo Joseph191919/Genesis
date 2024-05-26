@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <style>
+        body {
+           margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #ffcccc, #ff99cc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff3366;
+            margin-bottom: 20px;
+            animation: rainbow-text 2s infinite;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #ff6699;
+        }
+
+        .balloons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 100px;
+            height: 150px;
+            background-color: transparent;
+            border-radius: 50% 50% 0 0;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .balloon::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 4px;
+        }
+
+        .balloon:nth-child(1) {
+            left: 10%;
+            background-color: #ff6666;
+            animation-duration: 5s;
+        }
+
+        .balloon:nth-child(2) {
+            left: 30%;
+            background-color: #ffcc66;
+            animation-duration: 6s;
+        }
+
+        .balloon:nth-child(3) {
+            left: 50%;
+            background-color: #66ff66;
+            animation-duration: 7s;
+        }
+
+        .balloon:nth-child(4) {
+            left: 70%;
+            background-color: #66ccff;
+            animation-duration: 8s;
+        }
+
+        .balloon:nth-child(5) {
+            left: 90%;
+            background-color: #cc66ff;
+            animation-duration: 9s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes rainbow-text {
+            0% { color: #ff3366; }
+            14% { color: #ff6699; }
+            28% { color: #ff99cc; }
+            42% { color: #cc66ff; }
+            56% { color: #66ccff; }
+            70% { color: #66ff66; }
+            84% { color: #ffcc66; }
+            100% { color: #ff3366; }
+        }
+    </style>
+    </head>
+    <body>        <div class="container">
+            <h1>Feliz Cumpleaños Genesis</h1>
+            <div class="string"></div>
+
+            <p>Espero que cumplas todos tus objetivos que te propongas, que pases tus materias, que te liberes de toda vibra negativa y estresante y que simplemente seas feliz. Te quiero muchísimo y espero que sepas que siempre podrás contar conmigo.</p>
+            <p><span class="heart">❤️</span></p>
+        </div>
+        <div class="balloons">
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+        </div>
+    </body>
+</html>
